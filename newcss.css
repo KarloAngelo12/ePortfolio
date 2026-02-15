@@ -1,0 +1,777 @@
+/* Core Styling & Reset */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body { 
+    /* A balanced, cool-toned gray-blue */
+    background-color: #f1f4f8; 
+    padding-bottom: 100px; 
+}
+/* --- NAVIGATION & SEARCH --- */
+nav { 
+    background: #fff;
+    border-bottom: 1px solid #ddd; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    padding: 10px 0; 
+}
+
+.nav-flex { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 0 20px;
+}
+
+.site-title { 
+    font-weight: bold; 
+    color: #444; 
+}
+
+/* Search bar with IT.jpg background */
+.search-container { 
+    display: flex; 
+    align-items: center; 
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                url('IT.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 8px 15px; 
+    border-radius: 8px; 
+    width: 40%;
+    border: 1px solid #ddd;
+}
+
+.search-container input { 
+    border: none; 
+    background: transparent; 
+    outline: none; 
+    width: 100%; 
+    margin-left: 10px;
+    color: #333;
+}
+
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+}
+
+.nav-links li { 
+    margin-left: 20px; 
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: #5f6368; 
+    font-size: 14px; 
+    font-weight: 500; 
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover { 
+    color: #a31d1d; 
+}
+
+/* --- HERO BANNER --- */
+/* This handles the banner image and text overlay */
+.hero-banner {
+    height: 350px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('IT.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-banner h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.banner-content h1 {
+    font-size: 52px;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.banner-underline {
+    width: 100px; 
+    height: 4px; 
+    background: #7986cb; /* Purple accent */
+    margin: 20px auto; 
+}
+
+/* --- CONTENT SECTIONS --- */
+.container { 
+    max-width: 1100px; 
+    margin: auto; 
+    padding: 20px; 
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.about-section h2 { 
+    font-size: 32px; 
+    margin-bottom: 25px; 
+    color: #5f6368; 
+}
+
+.about-section p { 
+    font-size: 18px; 
+    line-height: 1.8; 
+    color: #3c4043;
+    margin-bottom: 20px;
+}
+
+/* --- GRADUATE ATTRIBUTES LAYOUT (Sidebar & Content) --- */
+.attributes-layout { 
+    display: flex; 
+    gap: 30px; 
+    margin-top: 20px; 
+    min-height: 500px; 
+}
+
+.sidebar { 
+    width: 320px; 
+    flex-shrink: 0; 
+    background: transparent; /* Removed background for the 'last time' look */
+    transition: none; /* No more sliding */
+}
+.sidebar.closed { 
+    width: 0; 
+    opacity: 0; 
+    pointer-events: none; 
+}
+
+.sidebar-header { 
+    display: flex; 
+    align-items: center; 
+    color: #a31d1d; 
+    font-weight: bold; 
+    padding: 12px 0; /* Padding adjusted for no-border look */
+    background: none; /* Removed gray background */
+    user-select: none;
+    font-size: 1.2rem;
+}
+
+.sidebar-links { 
+    list-style: none; 
+    border-left: 2px solid #ddd; 
+    padding-left: 15px; 
+    margin-top: 10px;
+}
+
+.tab-btn { 
+    border: none; 
+    background: none; 
+    text-align: left; 
+    cursor: pointer; 
+    color: #5f6368; 
+    font-size: 14px; 
+    width: 100%; 
+    padding: 10px 0; 
+    display: block; 
+    transition: 0.2s; 
+}
+
+.tab-btn:hover {
+    background-color: #eee;
+}
+
+.tab-btn:hover { 
+    color: #a31d1d; 
+    padding-left: 5px; 
+}
+
+.tab-btn.active { 
+    color: #a31d1d; 
+    font-weight: bold; 
+    border-left: 3px solid #a31d1d; 
+    padding-left: 10px; 
+    margin-left: -17px; /* Aligns the active border perfectly with the sidebar line */
+}
+
+/* Enhancing the content area to look "lifted" off the light background */
+.content-area { 
+    flex-grow: 1; 
+    border: 1px solid #e0e0e0; /* Changed from dashed to solid for a cleaner look */
+    border-radius: 8px; 
+    padding: 25px; 
+    background: #ffffff; /* Keep this pure white so it contrasts with the body */
+    min-height: 450px; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Added a very subtle shadow */
+}
+
+.tab-pane { 
+    display: none; 
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-pane.active { 
+    display: block; 
+}
+
+/* --- TABLES & ARTIFACTS --- */
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 15px; 
+}
+
+td { 
+    border: 1px solid #eee; 
+    padding: 15px; 
+    color: #3c4043;
+    font-size: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+td:first-child {
+    font-weight: bold;
+    color: #a31d1d;
+    width: 40%;
+}
+
+/* Container for the footer pill */
+.info-pill-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999; /* Ensures it stays above all other content */
+    cursor: pointer;
+}
+
+.info-pill {
+    background: rgba(32, 33, 36, 0.95); /* Darker, professional grey */
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+/* The circular "i" symbol */
+.info-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    font-family: "Georgia", serif; /* Serifs make the 'i' look better */
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.pill-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: max-width 0.5s ease;
+}
+
+.pill-content.closed {
+    display: none; /* Keeps it hidden until clicked */
+}
+
+.pill-link {
+    color: #8ab4f8; /* Professional blue link */
+    text-decoration: none;
+}
+
+.pill-link:hover {
+    text-decoration: underline;
+}
+
+.info-pill span { 
+    color: #888; 
+}
+
+/* --- ANIMATIONS & UTILITIES --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Folder Styling */
+.folder-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.folder-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.folder-item:hover {
+    background-color: #f1f3f4;
+}
+
+.fa-folder {
+    color: #fcc015; /* Professional folder yellow */
+    font-size: 18px;
+}
+
+.folder-link {
+    text-decoration: none;
+    color: #3c4043;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.folder-link:hover {
+    color: #a31d1d; /* Matches your theme color */
+    text-decoration: underline;
+}
+/* Folder Grouping */
+.folder-group { margin-bottom: 5px; }
+
+.main-folder {
+    cursor: pointer;
+    font-weight: 600;
+    background: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.main-folder:hover { background: #e8eaed; }
+
+/* Nested Sub-folder Styling */
+.sub-folder-container {
+    display: none; /* Hidden by default */
+    padding-left: 30px; /* Indent the exercises */
+    border-left: 2px dashed #ddd;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.sub-item {
+    font-size: 13px;
+    padding: 5px 0;
+    color: #5f6368;
+}
+
+.fa-file-pdf {
+    color: #e44145; /* PDF Red */
+    margin-right: 8px;
+}
+
+.fa-folder, .fa-folder-open {
+    color: #fcc015; /* Professional folder yellow */
+    margin-right: 10px;
+    transition: transform 0.2s ease; /* Adds a tiny bit of movement */
+}
+
+.folder-link {
+    text-decoration: none;
+    color: #3c4043;
+    transition: color 0.2s;
+}
+
+.folder-link:hover {
+    color: #a31d1d;
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    .contact-card {
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .social-item {
+        font-size: 16px;
+    }
+}
+
+/* Ensure sub-folders are hidden by default */
+.sub-folder-container {
+    display: none;
+    margin-left: 25px;
+    border-left: 1px dashed #ccc;
+    padding-left: 10px;
+}
+/* Background Dimmer */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Main Container from your image */
+.report-container {
+    background-color: #121212; /* Deep dark gray/black */
+    width: 90%;
+    max-width: 400px;
+    border-radius: 24px; /* Soft rounded corners */
+    padding: 16px 0;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Individual Rows */
+.report-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    color: #e0e0e0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+/* Hover Effect */
+.report-item:hover {
+    background-color: #1f1f1f; /* Slightly lighter gray on hover */
+}
+
+/* Arrow/Chevron Icon */
+.chevron {
+    color: #888;
+    font-size: 24px;
+    font-weight: 300;
+}
+/* Center the entire Achievements container */
+.achievements-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.achievements-title {
+    font-size: 2.5rem;
+    color: #5d6d7e;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.achievement-card {
+    max-width: 600px; /* Adjust this to make the image larger or smaller */
+    width: 100%;
+}
+
+.achievement-card h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* The Image Container */
+.achievement-img-wrapper {
+    border: 3px solid #333;
+    padding: 5px;
+    background-color: #fff;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    display: inline-block; 
+}
+
+.achievement-img-wrapper:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.achievement-img-wrapper img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Centering the bullet points below the image */
+.achievement-text-box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.achievement-text-box ul {
+    text-align: left; /* Keeps text readable while the container is centered */
+    list-style-type: square;
+    color: #555;
+}
+/* Profile Section Styles */
+.profile-section {
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Space between image and text */
+    max-width: 900px;
+    width: 100%;
+}
+
+.profile-image img {
+    width: 300px; /* Adjust size to match reference */
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.profile-details h2 {
+    font-size: 2.5rem;
+    color: #5d6d7e;
+    margin-bottom: 25px;
+}
+
+.profile-details p {
+    font-size: 1.1rem;
+    margin: 12px 0;
+    color: #333;
+}
+/* Adding the border frame to the profile image */
+.profile-image-wrapper {
+    border: 2px solid #333; /* Matches your Dean's List frame */
+    padding: 8px; /* Space between the border and the photo */
+    background-color: #fff;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtle lift */
+    transition: transform 0.3s ease;
+}
+
+.profile-image-wrapper:hover {
+    transform: translateY(-5px); /* Gentle lift effect on hover */
+    border-color: #a31d1d; /* Border turns Mapua Red when you hover */
+}
+
+.profile-image-wrapper img {
+    width: 280px; /* Fixed width to keep it consistent */
+    height: auto;
+    display: block;
+    border-radius: 2px;
+}
+
+/* Divider Line */
+.section-divider {
+    border: 0;
+    height: 2px; /* Slightly thicker for better visibility */
+    background: linear-gradient(to right, transparent, #a31d1d, transparent); /* Fades out on the edges */
+    margin: 50px auto; 
+    width: 70%; 
+    opacity: 0.6; /* Makes it subtle and not too distracting */
+}
+
+/* Centered Achievements */
+.achievements-section {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.achievements-title {
+    font-size: 2.5rem;
+    color: #5d6d7e;
+    margin-bottom: 40px;
+}
+
+.achievement-card {
+    display: inline-block;
+}
+
+.achievement-img-wrapper {
+    border: 2px solid #333;
+    padding: 5px;
+    display: inline-block;
+}
+
+.achievement-img-wrapper img {
+    max-width: 500px; /* Limits the size of the Dean's list image */
+    width: 100%;
+    height: auto;
+}
+/* --- STRENGTHS SECTION --- */
+.strengths-section {
+    padding: 60px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Reusing your main-title style for consistency */
+.strengths-section .main-title {
+    font-size: 2.5rem;
+    color: #5d6d7e; /* Matches your Achievements title color */
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.strengths-grid {
+    display: flex; /* Aligns children horizontally */
+    justify-content: space-around; /* Distributes space evenly */
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.strength-item {
+    flex: 1; /* Allows items to grow and shrink equally */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff; /* Optional: adds a card feel */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.strength-title {
+    font-size: 1.5rem;
+    color: #5d6d7e;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Blank Placeholder matching the proportions of your image */
+.strength-placeholder {
+    width: 100%;
+    max-width: 200px; /* Reduced size for better horizontal fit */
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.strength-placeholder img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Keeps the shield logos from stretching */
+}
+
+/* Add a hover effect for the logos */
+.strength-item:hover .strength-placeholder img {
+    transform: scale(1.1);
+}
+/* Mobile Responsive: Stacks them vertically on small screens */
+@media (max-width: 768px) {
+    .strengths-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.proficiency-text {
+    font-size: 1rem;
+    color: #444;
+}
+
+.proficiency-text span {
+    font-weight: 500;
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 768px) {
+    .strengths-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .strength-item {
+        margin-bottom: 40px;
+    }
+}
+/* --- GOALS SECTION --- */
+.goals-section {
+    padding: 60px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center; /* Centers the main title */
+}
+
+/* Inherits color (#5d6d7e) and size (2.5rem) from your existing .main-title */
+.goals-section .main-title {
+    margin-bottom: 50px;
+    color: #5d6d7e;  
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+
+.goals-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left; /* Aligns the goal descriptions like your reference image */
+}
+
+.goal-item {
+    flex: 1;
+}
+
+.goal-subtitle {
+    font-size: 1.3rem;
+    color: #5d6d7e; /* Matches the sub-headers in Achievements/Strengths */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.goal-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+/* Final Ending Line - spans wider to "cap" the page */
+.section-divider.ending-line {
+    width: 100%; /* Spans the full width of the container */
+    height: 3px; /* Slightly thicker */
+    background: linear-gradient(to right, transparent, #a31d1d, transparent);
+    margin-top: 80px; /* More space above the final line */
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+/* Align logo with text in the nav bar */
+.site-title {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between logo and text */
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.nav-logo {
+    height: 35px; /* Adjust size as needed */
+    width: auto;
+    /* Optional: If your logo is a simple shape, you can give it a blue background 
+       like your reference image by uncommenting the lines below */
+    /* background: #3f51b5; 
+       padding: 5px; 
+       border-radius: 4px; */
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information Technology - Student Outcomes</title>
+    <link rel="stylesheet" href="newcss.css">
+    <link rel="icon" type="jpg" href="logo.jpg">
+</head>
+<body>
+    <nav>
+        <div class="nav-flex">
+          <div class="site-title"><img src="logo.jpg" alt="Logo" class="nav-logo">Information Technology</div>
+            <div class="search-container">
+                <span>🔍</span>
+               <input type="text" id="siteSearch" placeholder="Search site (e.g. 'ATM')..." onkeyup="executeSearch(event)">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="outcomes.html">Student Outcomes</a></li>
+                <li><a href="attributes.html">Graduate Attributes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-banner">
+        <div class="banner-content">
+            <h1>Student Outcomes</h1>
+            <div class="banner-underline"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="attributes-layout">
+            <aside class="sidebar">
+                <ul class="sidebar-links">
+                    <li><button class="tab-btn active" onclick="openTab(event, 'SO_List')">Outcome Mapping</button></li>
+                </ul>
+            </aside>
+            <main class="content-area" style="flex: 1;">
+                <div id="SO_List" class="tab-pane active">
+                    <h2>Student Outcomes </h2>
+                    <table>
+                        <tr id="SO1">
+                            <td><strong>Student Outcome 1</strong></td>
+                            <td>Analyze a complex computing problem and apply principles of computing and other relevant disciplines to identify solutions.</td>
+                        </tr>
+                        <tr id="SO2">
+                            <td><strong>Student Outcome 2 and 3</strong></td>
+                            <td>An ability to design, implement, and evaluate a computer-based solution to meet a given set of computing  requirements in the context of the discipline.</td>
+                        </tr>
+                        <tr id="SO3">
+                            <td><strong>Student Outcome 4</strong></td>
+                            <td>Communicate effectively in professional contexts.</td>
+                        </tr>
+                        <tr id="SO4">
+                            <td><strong>Student Outcome 5</strong></td>
+                            <td>ABET Student Outcome 1, 2, & 6</td>
+                        </tr>
+                        <tr id="SO5">
+                            <td><strong>Student Outcome 6</strong></td>
+                            <td>Function effectively as a member of a team engaged in activities appropriate to the program discipline.</td>
+                        </tr>
+                        <tr id="SO6">
+                            <td><strong>Student Outcome 7 and 8</strong></td>
+                            <td>Recognize professional responsibilities and make informed judgement in computing practice based on legal and ethical principles.</td>
+                        </tr>
+                        <tr id="SO7">
+                            <td><strong>Student Outcome 9</strong></td>
+                            <td>An ability to identify and analyze user needs and to take them into account in the selection, creation, integration, evaluation, and administration of computing-based systems.</td>
+                        </tr>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="info-pill-container" onclick="togglePill()">
+    <div class="info-pill">
+        <span id="infoIcon" class="info-circle">i</span>
+        
+        <div id="pillContent" class="pill-content closed">
+            Page updated Feb 15, 2026 
+            <span>|</span> 
+            <a href="https://workspace.google.com/products/sites/" class="pill-link" target="_blank">Google Sites</a> 
+            <span>|</span> 
+            Report abuse
+        </div>
+    </div>
+</div>
+
+    <script src="search.js"></script>
+    <script>
+        // Tab Logic
+        function openTab(evt, tabName) {
+            document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+
+        // ADDED: Footer Pill Logic
+        function togglePill() {
+            const content = document.getElementById('pillContent');
+            const arrow = document.getElementById('pillArrow');
+            content.classList.toggle('closed');
+            arrow.innerHTML = content.classList.contains('closed') ? '▶' : '▼';
+        }
+    </script>
+</body>
+</html>

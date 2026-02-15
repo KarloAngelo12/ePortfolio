@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information Technology - Graduate Attributes</title>
+    <link rel="stylesheet" href="newcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="jpg" href="logo.jpg">
+    <style>
+        .attributes-layout { display: flex; gap: 30px; margin-top: 20px; min-height: 400px; }
+        
+        /* Sidebar Styling */
+        .sidebar { width: 320px; flex-shrink: 0; position: sticky; top: 80px; height: fit-content; transition: 0.3s; }
+        .sidebar.closed { width: 0; opacity: 0; pointer-events: none; }
+        
+        .sidebar-header { display: flex; align-items: center; cursor: pointer; color: #a31d1d; font-weight: bold; margin-bottom: 10px; padding: 10px; background: #eee; border-radius: 5px; user-select: none; }
+        .sidebar-links { list-style: none; border-left: 2px solid #ddd; padding-left: 15px; }
+        
+        .tab-btn { border: none; background: none; text-align: left; cursor: pointer; color: #5f6368; font-size: 14px; width: 100%; padding: 10px 0; display: block; transition: 0.2s; }
+        .tab-btn:hover { color: #a31d1d; padding-left: 5px; }
+        .tab-btn.active { color: #a31d1d; font-weight: bold; border-left: 3px solid #a31d1d; padding-left: 10px; margin-left: -27px; }
+
+        /* Content Area */
+        .content-area { flex-grow: 1; border: 1px dashed #ccc; border-radius: 8px; padding: 20px; background: #fff; transition: border 0.3s; }
+        .tab-pane { display: none; }
+        .tab-pane.active { display: block; border: none; }
+        
+        #placeholder-text { color: #888; text-align: center; margin-top: 100px; }
+        
+        /* Highlight for Search */
+        .search-highlight { background-color: #fff9c4 !important; transition: background 1s; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-flex">
+           <div class="site-title"><img src="logo.jpg" alt="Logo" class="nav-logo">Information Technology</div>
+            <div class="search-container">
+                <span>🔍</span>
+<input type="text" id="siteSearch" placeholder="Search site (e.g. 'ATM')..." onkeyup="executeSearch(event)">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="outcomes.html">Student Outcomes</a></li>
+                <li><a href="attributes.html">Graduate Attributes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-banner">
+        <div class="banner-content">
+            <h1>Graduate Attributes</h1>
+            <div class="banner-underline"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar-header" onclick="toggleSidebar(); resetContent();">
+            <span id="toggleIcon">▼</span> Graduate Attributes Categories
+        </div>
+
+        <div class="attributes-layout">
+            <aside id="sidebar" class="sidebar">
+                <ul class="sidebar-links">
+                    <li><button class="tab-btn" onclick="openTab(event, 'Knowledge')">Knowledge for Solving Computer Problems</button></li>
+                    <li><button class="tab-btn" onclick="openTab(event, 'Analysis')">Problem Analysis</button></li>
+                    <li><button class="tab-btn" onclick="openTab(event, 'Design')">Design / Development of Solutions</button></li>
+                    <li><button class="tab-btn" onclick="openTab(event, 'Tools')">Modern Tool Usage</button></li>
+                    <li><button class="tab-btn" onclick="openTab(event, 'Team')">Individual and Team Work</button></li>
+                    <li><button class="tab-btn" onclick="openTab(event, 'Communication')">Communication</button></li>
+                    <li><button class="tab-btn" onclick="openTab(event, 'Ethics')">Computing Professionalism and Ethics</button></li>
+                    <li><button class="tab-btn" onclick="openTab(event, 'Learning')">Life-long Learning</button></li>
+                </ul>
+            </aside>
+
+            <div class="content-area" id="main-content">
+                <div id="placeholder-text">
+                    <p>Select a category from the sidebar to view the associated course artifacts.</p>
+                </div>
+
+                <div id="Knowledge" class="tab-pane">
+    <h3>Knowledge for Solving Computer Problems</h3>
+    <table>
+     <tr id="CSS121L">
+    <td><strong>CSS121P_FOPI01: Computer Programming 1 Laboratory</strong></td>
+    <td>
+        <div class="folder-container">
+            <div class="folder-group">
+                <div class="folder-item main-folder" onclick="toggleSubFolder('lab-subfolders')">
+                    <i class="fa-solid fa-folder"></i> 
+                    <span class="folder-label">Laboratory Activities</span>
+                </div>
+                
+                <div id="lab-subfolders" class="sub-folder-container">
+                    
+                    <div class="folder-item main-folder" onclick="toggleSubFolder('ex1-subfolders')">
+                        <i class="fa-solid fa-folder"></i> 
+                        <span class="folder-label">Exercise 1 - Sequential</span>
+                    </div>
+                    <div id="ex1-subfolders" class="sub-folder-container">
+                        <div class="folder-item sub-item">
+                            <i class="fa-solid fa-file-pdf"></i> 
+                            <a href="Question1_2025173209.drawio.pdf" class="folder-link" target="_blank">Q1: Hours to Seconds Converter</a>
+                        </div>
+                        <div class="folder-item sub-item">
+                            <i class="fa-solid fa-file-pdf"></i> 
+                            <a href="Question2_2025173209.drawio.pdf" class="folder-link" target="_blank">Q2: Triangle Third Edge Calculator</a>
+                        </div>
+                        <div class="folder-item sub-item">
+                            <i class="fa-solid fa-file-pdf"></i> 
+                            <a href="Question3_2025173209.drawio.pdf" class="folder-link" target="_blank">Q3: Waiter Tip Calculator</a>
+                        </div>
+                        <div class="folder-item sub-item">
+                            <i class="fa-solid fa-file-pdf"></i> 
+                            <a href="Question4_2025173209.drawio.pdf" class="folder-link" target="_blank">Q4: Bob's Auto Repair Bill</a>
+                        </div>
+                    </div>
+
+                    <div class="folder-item main-folder" onclick="toggleSubFolder('ex2-subfolders')">
+                        <i class="fa-solid fa-folder"></i> 
+                        <span class="folder-label">Exercise 2 - Selection</span>
+                    </div>
+                    <div id="ex2-subfolders" class="sub-folder-container">
+                        <div class="folder-item sub-item">
+                            <i class="fa-solid fa-file-pdf"></i> 
+                            <a href="Question5_2025173209.drawio.pdf" class="folder-link" target="_blank">Q5: Integer Evaluation</a>
+                        </div>
+                        <div class="folder-item sub-item">
+                            <i class="fa-solid fa-file-pdf"></i> 
+                            <a href="Question6_2025173209.drawio.pdf" class="folder-link" target="_blank">Q6: Salary Grade Logic</a>
+                        </div>
+                        <div class="folder-item sub-item">
+                            <i class="fa-solid fa-file-pdf"></i> 
+                            <a href="Question7_2025173209.drawio.pdf" class="folder-link" target="_blank">Q7: Atmospheric Conditions</a>
+                        </div>
+                    </div>
+<div class="folder-item main-folder" onclick="toggleSubFolder('ex3-subfolders')">
+    <i class="fa-solid fa-folder"></i> 
+    <span class="folder-label">Exercise 3 - C++ Sequential</span>
+</div>
+
+<div id="ex3-subfolders" class="sub-folder-container">
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog1_2025173209.cpp" class="folder-link" target="_blank">Prog 1: Lupang Hinirang</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i>
+        <a href="Prog2_2025173209.cpp" class="folder-link" target="_blank">Prog 2: Name Greeting</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog3_2025173209.cpp" class="folder-link" target="_blank">Prog 3: Name & Age</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog4_2025173209.cpp" class="folder-link" target="_blank">Prog 4: Value Swapping</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog5_2025173209.cpp" class="folder-link" target="_blank">Prog 5: Next Integer</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog6_2025173209.cpp" class="folder-link" target="_blank">Prog 6: Arithmetic</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog7_2025173209.cpp" class="folder-link" target="_blank">Prog 7: Min to Sec</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i>
+        <a href="Prog8_2025173209.cpp" class="folder-link" target="_blank">Prog 8: Triangle Area</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog9_2025173209.cpp" class="folder-link" target="_blank">Prog 9: Power Calculator</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog10_2025173209.cpp" class="folder-link" target="_blank">Prog 10: Hrs to Sec</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog11_2025173209.cpp" class="folder-link" target="_blank">Prog 11: Max Third Edge</a></div>
+
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog12_2025173209.cpp" class="folder-link" target="_blank">Prog 12: Rectangle Perimeter</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog13_2025173209.cpp" class="folder-link" target="_blank">Prog 13: Weight Converter (kg)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog14_2025173209.cpp" class="folder-link" target="_blank">Prog 14: Celsius to Fahrenheit</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog15_2025173209.cpp" class="folder-link" target="_blank">Prog 15: Waiter Tip Calculator</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog16_2025173209.cpp" class="folder-link" target="_blank">Prog 16: Auto Repair Bill</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog17_2025173209.cpp" class="folder-link" target="_blank">Prog 17: BMI Calculator</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog18.1_2025173209.cpp" class="folder-link" target="_blank">Prog 18.1: Toy Car Assembly</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog18.2_2025173209.cpp" class="folder-link" target="_blank">Prog 18.2: Graduation Tickets</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog19_2025173209.cpp" class="folder-link" target="_blank">Prog 19: Remainder Calculator</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog20_2025173209.cpp" class="folder-link" target="_blank">Prog 20: Training Heart Rate</a>
+    </div>
+</div>
+                   <div class="folder-item main-folder" onclick="toggleSubFolder('ex4-subfolders')">
+    <i class="fa-solid fa-folder"></i> 
+    <span class="folder-label">Exercise 4 - Conditional Practices part 1</span>
+</div>
+
+<div id="ex4-subfolders" class="sub-folder-container">
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice1_2025173209.cpp" class="folder-link" target="_blank">Practice 1: Positive Number Check</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i>
+        <a href="Practice2_2025173209.cpp" class="folder-link" target="_blank">Practice 2: Passing Score</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice3_2025173209.cpp" class="folder-link" target="_blank">Practice 3: Rain Check</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice4_2025173209.cpp" class="folder-link" target="_blank">Practice 4: Voting Eligibility</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice5_2025173209.cpp" class="folder-link" target="_blank">Practice 5: High Temperature Alert</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice6_2025173209.cpp" class="folder-link" target="_blank">Practice 6: Parity and Sign Check</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice7_2025173209.cpp" class="folder-link" target="_blank">Practice 7: Pass/Fail Evaluation</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i>
+        <a href="Practice8_2025173209.cpp" class="folder-link" target="_blank">Practice 8: Adult or Minor Classification</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice9_2025173209.cpp" class="folder-link" target="_blank">Practice 9: Discount Calculation</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice10_2025173209.cpp" class="folder-link" target="_blank">Practice 10: Grade Calculator</a></div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice11_2025173209.cpp" class="folder-link" target="_blank">Practice 11: Temperature Classification</a></div>
+
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice12_2025173209.cpp" class="folder-link" target="_blank">Practice 12: Utility Bill Calculation</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice13_2025173209.cpp" class="folder-link" target="_blank">Practice 13: Age Categorization</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice14_2025173209.cpp" class="folder-link" target="_blank">Practice 14: Score Evaluation</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice15_2025173209.cpp" class="folder-link" target="_blank">Practice 15: Salary Tax Calculation</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice16_2025173209.cpp" class="folder-link" target="_blank">Practice 16: Nested Login System</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice17_2025173209.cpp" class="folder-link" target="_blank">Practice 17: Scholarship Eligibility</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice18_2025173209" class="folder-link" target="_blank">Practice 18: ATM Transaction Logic</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice19_2025173209.cpp" class="folder-link" target="_blank">Practice 19: Qualification Check</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice20_2025173209.cpp" class="folder-link" target="_blank">Practice 20: Voting Eligibility with ID</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice21_2025173209.cpp" class="folder-link" target="_blank">Practice 21: Month Name Display</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice22_2025173209.cpp" class="folder-link" target="_blank">Practice 22: Basic Calculator</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice23_2025173209.cpp" class="folder-link" target="_blank">Practice 23: Vowel or Consonant Checker</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Practice24_2025173209.cpp" class="folder-link" target="_blank">Practice 24: Traffic Light Simulator</a>
+    </div>
+</div>
+                 <div class="folder-item main-folder" onclick="toggleSubFolder('ex5-subfolders')">
+    <i class="fa-solid fa-folder"></i> 
+    <span class="folder-label">Exercise 5 - Conditional Practices part 2</span>
+</div>
+
+<div id="ex5-subfolders" class="sub-folder-container">
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program21_2025173209.cpp" class="folder-link" target="_blank">Prog 21: Number Comparison</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program22_2025173209.cpp" class="folder-link" target="_blank">Prog 22: PIN Code Access</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program23_2025173209.cpp" class="folder-link" target="_blank">Prog 23: Positive/Negative Check</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program24_2025173209.cpp" class="folder-link" target="_blank">Prog 24: Switch-Case Word Display</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program25_2025173209.cpp" class="folder-link" target="_blank">Prog 25: Payroll with Overtime</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program26_2025173209.cpp" class="folder-link" target="_blank">Prog 26: Weather Beacon Logic</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program27_2025173209.cpp" class="folder-link" target="_blank">Prog 27: Equipment Rental System</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program28_2025173209.cpp" class="folder-link" target="_blank">Prog 28: BMI Health Classifier</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program29_2025173209.cpp" class="folder-link" target="_blank">Prog 29: Psychology Proverb Quiz</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program30_2025173209.cpp" class="folder-link" target="_blank">Prog 30: Days in Month (Leap Year)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program31_2025173209.cpp" class="folder-link" target="_blank">Prog 31: Even or Odd Checker</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program32_2025173209.cpp" class="folder-link" target="_blank">Prog 32: Alphabet, Digit, or Special Char</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program33_2025173209.cpp" class="folder-link" target="_blank">Prog 33: Vowel or Consonant (if-else)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program34_2025173209.cpp" class="folder-link" target="_blank">Prog 34: Upper or Lower Case Checker</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program35_2025173209.cpp" class="folder-link" target="_blank">Prog 35: Day of Week (Switch)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program36_2025173209.cpp" class="folder-link" target="_blank">Prog 36: Triangle Validity (Angles)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program37_2025173209.cpp" class="folder-link" target="_blank">Prog 37: Triangle Validity (Sides)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program38_2025173209.cpp" class="folder-link" target="_blank">Prog 38: Triangle Type (Equi/Iso/Scalene)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program39_2025173209.cpp" class="folder-link" target="_blank">Prog 39: Quadratic Equation Roots</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Program40_2025173209.cpp" class="folder-link" target="_blank">Prog 40: Profit or Loss Calculator</a>
+    </div>
+</div>
+                    <div class="folder-item main-folder" onclick="toggleSubFolder('ex6-subfolders')">
+    <i class="fa-solid fa-folder"></i> 
+    <span class="folder-label">Exercise 6 - Loop Practices</span>
+</div>
+
+<div id="ex6-subfolders" class="sub-folder-container">
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog71_2025173209.cpp" class="folder-link" target="_blank">Prog 71: Name Repeater (For Loop)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog72_2025173209.cpp" class="folder-link" target="_blank">Prog 72: Name Repeater (Do-While)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog73_2025173209.cpp" class="folder-link" target="_blank">Prog 73: Name Repeater (While)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog74_2025173209.cpp" class="folder-link" target="_blank">Prog 74: Even Numbers 0-200 (For)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog75_2025173209.cpp" class="folder-link" target="_blank">Prog 75: Even Numbers 0-200 (Do-While)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog76_2025173209.cpp" class="folder-link" target="_blank">Prog 76: Even Numbers 0-200 (While)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog77_2025173209.cpp" class="folder-link" target="_blank">Prog 77: Asterisk Row (Validation Loop)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog78_2025173209.cpp" class="folder-link" target="_blank">Prog 78: Asterisk Row (Do-While Input)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog79_2025173209.cpp" class="folder-link" target="_blank">Prog 79: Asterisk Row (While Input)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog80_2025173209.cpp" class="folder-link" target="_blank">Prog 80: 10x10 Asterisk Grid (Nested Loops)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog81_2025173209.cpp" class="folder-link" target="_blank">Prog 81: 10x10 Asterisk Grid (Nested Do-While)</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog82_2025173209.cpp" class="folder-link" target="_blank">Prog 82: 10x10 Asterisk Grid (Nested While)</a>
+    </div>
+</div>
+                   <div class="folder-item main-folder" onclick="toggleSubFolder('ex7-subfolders')">
+    <i class="fa-solid fa-folder"></i> 
+    <span class="folder-label">Exercise 7 - Grade Computation (Void Functions)</span>
+</div>
+
+<div id="ex7-subfolders" class="sub-folder-container">
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Exercise7_2025173209.cpp" class="folder-link" target="_blank">Exercise 7: Final Source Code</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #e06c75;"></i> 
+        <a href="Exercise7_2025173209 (Errors).cpp" class="folder-link" target="_blank">Exercise 7: Debugging/Error Log</a>
+    </div>
+</div>
+                   <div class="folder-item main-folder" onclick="toggleSubFolder('ex8-subfolders')">
+    <i class="fa-solid fa-folder"></i> 
+    <span class="folder-label">Exercise 8 - Void Function with Parameters</span>
+</div>
+
+<div id="ex8-subfolders" class="sub-folder-container">
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog84_2025173209.cpp" class="folder-link" target="_blank">Prog 84: Hours to Seconds (Pass-by-Value)</a>
+    </div>
+    <div class="folder-item sub-item" style="padding-left: 40px; font-size: 0.9em;">
+        <i class="fa-solid fa-bug" style="color: #e06c75;"></i> 
+        <a href="Prog84_2025173209 (Errors).cpp" class="folder-link" target="_blank">Prog 84: Debugging Log</a>
+    </div>
+
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog/Prog85_2025173209.cpp" class="folder-link" target="_blank">Prog 85: Range Math (Multi-Parameter)</a>
+    </div>
+    <div class="folder-item sub-item" style="padding-left: 40px; font-size: 0.9em;">
+        <i class="fa-solid fa-bug" style="color: #e06c75;"></i> 
+        <a href="Prog85_2025173209 (Errors).cpp" class="folder-link" target="_blank">Prog 85: Debugging Log</a>
+    </div>
+
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-code" style="color: #00599c;"></i> 
+        <a href="Prog86_2025173209.cpp" class="folder-link" target="_blank">Prog 86: RPS Game (Pass-by-Reference)</a>
+    </div>
+    <div class="folder-item sub-item" style="padding-left: 40px; font-size: 0.9em;">
+        <i class="fa-solid fa-bug" style="color: #e06c75;"></i> 
+        <a href="Prog86_2025173209 (Errors).cpp" class="folder-link" target="_blank">Prog 86: Debugging Log</a>
+    </div>
+</div>
+            </div>
+
+            <div class="folder-item main-folder" onclick="toggleSubFolder('lecture-subfolders')">
+    <i class="fa-solid fa-folder"></i> 
+    <span class="folder-label">Lecture Activities</span>
+</div>
+
+<div id="lecture-subfolders" class="sub-folder-container">
+    <div class="folder-item sub-folder" onclick="toggleSubFolder('simulation-subfolders')">
+        <i class="fa-solid fa-folder-open" style="color: #ffca28;"></i> 
+        <span class="folder-label">Simulation</span>
+    </div>
+    
+    <div id="simulation-subfolders" class="sub-folder-container" style="padding-left: 20px;">
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-pdf" style="color: #ff4b4b;"></i> 
+        <a href="Question1_2025173209_Simulation.pdf" class="folder-link" target="_blank">Sim 1: Weekday Modulo Logic</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-pdf" style="color: #ff4b4b;"></i> 
+        <a href="Question2_2025173209_Simulation.pdf" class="folder-link" target="_blank">Sim 2: Variable Execution Trace</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-pdf" style="color: #ff4b4b;"></i> 
+        <a href="Question3_2025173209_Simulation.pdf" class="folder-link" target="_blank">Sim 3: Basic Loop Iteration Counter</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-pdf" style="color: #ff4b4b;"></i> 
+        <a href="Question4_2025173209_Simulation.pdf" class="folder-link" target="_blank">Sim 4: Incremental Value Tracking</a>
+    </div>
+    <div class="folder-item sub-item">
+        <i class="fa-solid fa-file-pdf" style="color: #ff4b4b;"></i> 
+        <a href="Question5_2025173209_Simulation.pdf" class="folder-link" target="_blank">Sim 5: Factorial Calculation Trace</a>
+    </div>
+</div>
+    </div>
+</div>
+    </td>
+</tr>
+        <tr id="CSS122L">
+            <td>CSS122P_FOPM01: Computer Programming 2 Laboratory</td>
+            <td>Prototype Rubrics and Documentation</td>
+        </tr>
+    </table>
+</div>
+        
+        <div id="Analysis" class="tab-pane">
+                    <h3>Problem Analysis</h3>
+                    <table>
+                        <tr id="ITS109"><td>ITS109: Research Methods in Information Technology</td><td>Oral Defense Rubrics</td></tr>
+                        <tr id="CSS153L"><td>CSS153L: Software Quality Laboratory </td><td>Oral Defense Rubrics</td></tr>
+                        <tr id="ITS150L"><td>ITS150L: Operating Systems Laboratory</td><td>Prototype Rubrics and Documentation</td></tr>
+                    </table>
+                </div>
+
+                <div id="Design" class="tab-pane">
+                    <h3>Design / Development of Solutions</h3>
+                    <table>
+                        <tr id="CSS124L"><td>CSS124L: Event Driven/ GUI Programming Laboratory</td><td>Summative Exam 2 Score & Project Document Rubrics</td></tr>
+                        <tr id="CSS123L"><td>CSS123L: Object-Oriented Programming Laboratory</td><td>Summative Exam 2 Score & Project Document Rubrics</td></tr>
+                        <tr id="ITS151"><td>ITS151: Systems Integration and Architecture 1</td><td>Summative Exam Score</td></tr>
+                    </table>
+                </div>
+
+                <div id="Tools" class="tab-pane">
+                    <h3>Modern Tool Usage</h3>
+                    <table>
+                        <tr id="ITS121L"><td>ITS121-1L_FOPM01: Web Systems and Technologies 1 Laboratory</td><td>Project Statement & Methodology, Prototype Rubrics and Documentation</td></tr>
+                        <tr id="ITS122L"><td>ITS122L: Web Systems and Technologies 2 Laboratory</td><td>Project Statement & Methodology</td></tr>
+                        <tr id="ITS112L"><td>ITS112L: Computer Architecture and Organization Laboratory</td><td>Project Statement & Methodology</td></tr>
+                    </table>
+                </div>
+
+                <div id="Team" class="tab-pane">
+                    <h3>Individual and Team Work</h3>
+                    <table>
+                        <tr id="ITS151L"><td>ITS151L: Systems Integration 1 Laboratory</td><td>Peer Evaluation Form & Project Grade Form</td></tr>
+                        <tr id="ITS152L"><td>ITS152L: Systems Integration 2 Laboratory</td><td>Peer Evaluation Form & Project Grade Form</td></tr>
+                    </table>
+                </div>
+
+                <div id="Communication" class="tab-pane">
+                    <h3>Communication</h3>
+                    <table>
+                        <tr id="ITS200-2"><td>ITS200-2: Thesis 2</td><td>Prototype Rubrics and Documentation</td></tr>
+                        <tr id="ITS200-3"><td>ITS200-3: Thesis 3</td><td>Manuscript, Oral Defense Grade Sheet</td></tr>
+                    </table>
+                </div>
+
+                <div id="Ethics" class="tab-pane">
+                    <h3>Computing Professionalism and Ethics</h3>
+                    <table>
+                        <tr id="ITS105"><td>ITS105: Social and Professional Issues</td><td>Summative Exam Score & Course Assessment Evaluation Form</td></tr>
+                    </table>
+                </div>
+
+                <div id="Learning" class="tab-pane">
+                    <h3>Life-long Learning</h3>
+                    <table>
+                        <tr id="ITS198F"><td>ITS198F: Career Development and Seminar in IT </td><td>MELT/ TOEIC Score</td></tr>
+                        <tr id="ITS199-2R"><td>ITS199-2R: Practicum 2</td><td>OJT Performance Evaluation Form – Personal Skills Development</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-pill-container" onclick="togglePill()">
+    <div class="info-pill">
+        <span id="infoIcon" class="info-circle">i</span>
+        
+        <div id="pillContent" class="pill-content closed">
+            Page updated Feb 15, 2026 
+            <span>|</span> 
+            <a href="https://workspace.google.com/products/sites/" class="pill-link" target="_blank">Google Sites</a> 
+            <span>|</span> 
+            Report abuse
+        </div>
+    </div>
+</div>
+
+    <script src="search.js"></script>
+    <script>
+   function toggleSubFolder(id) {
+    const subFolder = document.getElementById(id);
+    const folderItem = event.currentTarget;
+    const icon = folderItem.querySelector('i');
+
+    if (subFolder.style.display === "block") {
+        subFolder.style.display = "none";
+        if (icon) icon.classList.replace('fa-folder-open', 'fa-folder');
+    } else {
+        subFolder.style.display = "block";
+        if (icon) icon.classList.replace('fa-folder', 'fa-folder-open');
+    }
+}
+        function openTab(evt, tabName) {
+            document.getElementById("placeholder-text").style.display = "none";
+            document.getElementById("main-content").style.border = "none";
+
+            let tabPanes = document.getElementsByClassName("tab-pane");
+            for (let i = 0; i < tabPanes.length; i++) { tabPanes[i].classList.remove("active"); }
+            
+            let tabBtns = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabBtns.length; i++) { tabBtns[i].classList.remove("active"); }
+            
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const icon = document.getElementById('toggleIcon');
+            sidebar.classList.toggle('closed');
+            icon.innerHTML = sidebar.classList.contains('closed') ? '▶' : '▼';
+        }
+
+        function resetContent() {
+            document.getElementById("placeholder-text").style.display = "block";
+            document.getElementById("main-content").style.border = "1px dashed #ccc";
+            let tabPanes = document.getElementsByClassName("tab-pane");
+            for (let i = 0; i < tabPanes.length; i++) { tabPanes[i].classList.remove("active"); }
+            let tabBtns = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabBtns.length; i++) { tabBtns[i].classList.remove("active"); }
+        }
+
+        function togglePill() {
+            const content = document.getElementById('pillContent');
+            const arrow = document.getElementById('pillArrow');
+            content.classList.toggle('closed');
+            arrow.innerHTML = content.classList.contains('closed') ? '▶' : '▼';
+        }
+    </script>
+</body>
+</html>

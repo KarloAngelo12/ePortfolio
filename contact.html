@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information Technology - Contact</title>
+    <link rel="stylesheet" href="newcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="jpg" href="logo.jpg">
+    <style>
+        .contact-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-top: 40px;
+        }
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .social-item a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+        /* Latest Branded Colors */
+        .fa-facebook { color: #1877F2; font-size: 28px; }
+        .fa-instagram { 
+            background: -webkit-linear-gradient(#f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 28px;
+        }
+        .fa-envelope { color: #a31d1d; font-size: 24px; }
+        
+        .social-item a:hover { color: #a31d1d; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-flex">
+          <div class="site-title"><img src="logo.jpg" alt="Logo" class="nav-logo">Information Technology</div>
+            <div class="search-container">
+                <span>🔍</span>
+<input type="text" id="siteSearch" placeholder="Search site (e.g. 'ATM')..." onkeyup="executeSearch(event)">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="outcomes.html">Student Outcomes</a></li>
+                <li><a href="attributes.html">Graduate Attributes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-banner">
+        <div class="banner-content">
+            <h1>Contact Me</h1>
+            <div class="banner-underline"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="contact-card">
+            <h2 style="color: #a31d1d; margin-bottom: 10px;">Karlo Angelo L. Babaran</h2>
+            <p style="color: #666; margin-bottom: 30px;">School of Information Technology (SOIT)</p>
+            
+            <div class="social-item">
+                <i class="fa-brands fa-facebook"></i>
+                <span><strong>Facebook:</strong> <a href="https://www.facebook.com/karloangelo.babaran.3" target="_blank">karloangelo.babaran.3</a></span>
+            </div>
+
+            <div class="social-item">
+                <i class="fa-brands fa-instagram"></i>
+                <span><strong>Instagram:</strong> <a href="https://www.instagram.com/_babarankarlo" target="_blank">@_babarankarlo</a></span>
+            </div>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <h3 style="margin-bottom: 15px;">Official Concerns</h3>
+            <div class="social-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span><strong>Official Email:</strong> <a href="<a href="kalbabaran@mymail.mapua.edu.ph">kalbabaran@mymail.mapua.edu.ph</a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-pill-container" onclick="togglePill()">
+        <div class="info-pill">
+            <span id="infoIcon" class="info-circle">i</span>
+            <div id="pillContent" class="pill-content closed">
+                Page updated Feb 15, 2026 
+                <span>|</span> 
+                <a href="https://workspace.google.com/products/sites/" class="pill-link" target="_blank">Google Sites</a> 
+                <span>|</span> 
+                Report abuse
+            </div>
+        </div>
+    </div>
+
+    <script src="search.js"></script>
+    <script>
+        // Updated Toggle logic for the "i" circle (no arrow swapping)
+        function togglePill() {
+            const content = document.getElementById('pillContent');
+            content.classList.toggle('closed');
+        }
+        function copyEmail() {
+    const email = "kalbabaran@mymail.mapua.edu.ph";
+    navigator.clipboard.writeText(email);
+    alert("Email copied to clipboard!");
+}
+    </script>
+</body>
+</html>

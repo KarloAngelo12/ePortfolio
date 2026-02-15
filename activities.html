@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information Technology - Activities</title>
+    <link rel="stylesheet" href="newcss.css">
+    <link rel="icon" type="jpg" href="logo.jpg">
+   </head>
+<body>
+    <nav>
+    <div class="nav-flex">
+      <div class="site-title"><img src="logo.jpg" alt="Logo" class="nav-logo">Information Technology</div>
+        <div class="search-container">
+            <span>🔍</span>
+            <input type="text" id="siteSearch" placeholder="Search..." onkeyup="executeSearch(event)">
+        </div> <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="outcomes.html">Student Outcomes</a></li>
+            <li><a href="attributes.html">Graduate Attributes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="hero-banner">
+        <div class="banner-content">
+            <h1>Activities</h1>
+            <div class="banner-underline"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="attributes-layout">
+            <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        Categories
+    </div>
+    <ul class="sidebar-links">
+        <li><button class="tab-btn active" onclick="openTab(event, 'Certificates')">Certificates</button></li>
+        <li><button class="tab-btn" onclick="openTab(event, 'StudentOrg')">Student Organizations</button></li>
+        <li><button class="tab-btn" onclick="openTab(event, 'Seminars')">Seminars & Training</button></li>
+    </ul>
+</aside>
+
+            <div class="content-area" id="main-content">
+                <div id="Certificates" class="tab-pane active">
+                    <h3>Coursera Certificates</h3>
+                    <table>
+                        <tr>
+                            <td>Coursera</td>
+                            <td>
+    <div class="folder-container">
+        
+        <div class="folder-group">
+            <div class="folder-item main-folder" onclick="toggleSubFolder('act-css121p')">
+                <i class="fa-solid fa-folder"></i> 
+                <span class="folder-label">CSS121P: Computer Programming 1 Laboratory</span>
+            </div>
+            <div id="act-css121p" class="sub-folder-container">
+                <div class="folder-item sub-item">
+                    <i class="fa-solid fa-file-pdf" style="color: #00599c;"></i>
+                    <a href="Coursera Certificate (CSS121P).pdf" class="folder-link">Coursera Certificate (CSS121P)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="folder-group">
+            <div class="folder-item main-folder" onclick="toggleSubFolder('act-css122p')">
+                <i class="fa-solid fa-folder"></i> 
+                <span class="folder-label">CSS122P: Computer Programming 2 Laboratory</span>
+            </div>
+            <div id="act-css122p" class="sub-folder-container">
+                <div class="folder-item sub-item">
+                    <i class="fa-solid fa-file-pdf" style="color: #00599c;"></i>
+                    <a href="Coursera Certificate (CSS122P).pdf" class="folder-link">Coursera Certificate (CSS122P)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="folder-group">
+            <div class="folder-item main-folder" onclick="toggleSubFolder('act-its121l')">
+                <i class="fa-solid fa-folder"></i> 
+                <span class="folder-label">ITS121L: Web Systems and Technologies 1 Laboratory</span>
+            </div>
+            <div id="act-its121l" class="sub-folder-container">
+                <div class="folder-item sub-item">
+                    <i class="fa-solid fa-file-pdf" style="color: #e44d26;"></i>
+                    <a href="Coursera Certificate - Advanced Styling with Responsive Design.pdf" class="folder-link">Coursera Certificate - Advanced Styling with Responsive Design</a>
+                </div>
+                <div class="folder-item sub-item">
+                    <i class="fa-solid fa-file-pdf" style="color: #e44d26;"></i>
+                    <a href="Coursera Certificate - Interactivity with Javascript.pdf" class="folder-link">Coursera Certificate - Interactivity with Javascript</a>
+                </div>
+            </div>
+        </div></td>
+                        </tr>
+                       
+                    </table>
+                </div>
+
+                <div id="StudentOrg" class="tab-pane">
+                    <h3>Student Organizations</h3>
+                    <p>Active member of the School of IT Student Council.</p>
+                </div>
+
+                <div id="Seminars" class="tab-pane">
+                    <h3>Seminars & Training</h3>
+                    <p>Attendance at various IT webinars and local tech summits.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   <div class="info-pill-container" onclick="togglePill()">
+    <div class="info-pill">
+        <span id="infoIcon" class="info-circle">i</span>
+        
+        <div id="pillContent" class="pill-content closed">
+            Page updated Feb 15, 2026 
+            <span>|</span> 
+            <a href="https://workspace.google.com/products/sites/" class="pill-link" target="_blank">Google Sites</a> 
+            <span>|</span> 
+            Report abuse
+        </div>
+    </div>
+</div>
+
+    <script>
+        
+        // Tab logic specifically for this page
+        function toggleSubFolder(id) {
+    const subFolder = document.getElementById(id);
+    if (subFolder) {
+        // Toggle display between 'none' and 'block'
+        if (subFolder.style.display === "block") {
+            subFolder.style.display = "none";
+        } else {
+            subFolder.style.display = "block";
+        }
+    }
+}
+        function openTab(evt, tabName) {
+            const panes = document.getElementsByClassName("tab-pane");
+            for (let i = 0; i < panes.length; i++) {
+                panes[i].classList.remove("active");
+                panes[i].style.display = "none";
+            }
+            const btns = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Sidebar Toggle
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('closed');
+        }
+
+        // Info Pill Toggle
+        function togglePill() {
+            const content = document.getElementById('pillContent');
+            const arrow = document.getElementById('pillArrow');
+            content.classList.toggle('closed');
+            arrow.innerHTML = content.classList.contains('closed') ? '▶' : '▼';
+        }
+    </script>
+    <script src="search.js"></script>
+</body>
+</html>

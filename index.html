@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information Technology - Home</title>
+    <link rel="stylesheet" href="newcss.css">
+    <link rel="icon" type="jpg" href="logo.jpg">
+</head>
+<body>
+    <nav>
+        <div class="nav-flex">
+            <div class="site-title"><img src="logo.jpg" alt="Logo" class="nav-logo">Information Technology</div>
+            <div class="search-container">
+                <span>🔍</span>
+<input type="text" id="siteSearch" placeholder="Search this site (e.g. 'ATM')..." onkeyup="executeSearch(event)">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="outcomes.html">Student Outcomes</a></li>
+                <li><a href="attributes.html">Graduate Attributes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-banner">
+        <div class="banner-content">
+            <h1>Information Technology<br>Student Portfolio</h1>
+            <div class="banner-underline"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="about-section">
+            <h2>About Me</h2>
+            <p><strong>Karlo Angelo L. Babaran</strong> is a 1st Year Student, studying at Mapua University in Makati Campus.</p>
+            <p>He has chosen to build his dreams by enrolling in the Bachelor of Science in Information Technology at Mapua University.</p>
+        </div>
+        
+        <hr class="section-divider ending-line">
+        
+       <div class="profile-section">
+    <div class="profile-container">
+        <div class="profile-image">
+            <div class="profile-image-wrapper">
+                <img src="profile.jpeg" alt="Karlo Angelo L. Babaran">
+            </div>
+        </div>
+        <div class="profile-details">
+            <h2>Profile</h2>
+            <p><strong>Full Name:</strong> Karlo Angelo L. Babaran</p>
+            <p><strong>Email Address:</strong> kalbabaran@mymail.mapua.edu.ph</p>
+            <p><strong>Degree Program:</strong> Bachelor of Science in Information Technology</p>
+            <p><strong>School:</strong> Mapua University</p>
+        </div>
+    </div>
+</div>
+
+<hr class="section-divider">
+
+     <div class="achievements-section">
+    <h2 class="achievements-title">Achievements</h2>
+    
+    <div class="achievement-card">
+        <h3>Dean's List Recognition</h3>
+        <div class="achievement-img-wrapper">
+            <img src="deans list.jpg" alt="Dean's List Recognition">
+        </div>
+        <div class="achievement-text-box">
+            <ul>
+                <li>Recognized on the Dean's List for the 1st Trimester A.Y. 2025-2026.</li>
+                <li>Awarded to Karlo Angelo L. Babaran.</li>
+                   <div class="fb-link-container">
+                   
+                    <p><li>Reference: 
+                        <a href="https://www.facebook.com/MapuaIDL/posts/pfbid0xNAer3kAyDnLo5oYnQ59wZ6252uPyH9pH7J9Cd7Cfyf9A8pBhxJ8JeHDrUSNPZJAl" 
+                           target="_blank" class="achievement-link">
+                           View Mapúa IDL Post 🔍
+                    </li> </a>
+    </div>
+            <hr>
+       </ul>
+            </div>
+      <div class="strengths-section">
+    <h2 class="main-title">Strengths</h2>
+    <div class="strengths-grid">
+        <div class="strength-item">
+            <h3 class="strength-title">HTML5</h3>
+            <div class="strength-placeholder">
+                <img src="html.jpg" alt="HTML5 Logo">
+            </div>
+            <p class="proficiency-text">Proficiency: <span>Beginner</span></p>
+        </div>
+
+        <div class="strength-item">
+            <h3 class="strength-title">CSS3</h3>
+            <div class="strength-placeholder">
+                <img src="css.jpg" alt="CSS3 Logo">
+            </div>
+            <p class="proficiency-text">Proficiency: <span>Beginner</span></p>
+        </div>
+
+        <div class="strength-item">
+            <h3 class="strength-title">JavaScript</h3>
+            <div class="strength-placeholder">
+                <img src="js.jpg" alt="JavaScript Logo">
+            </div>
+            <p class="proficiency-text">Proficiency: <span>Beginner</span></p>
+        </div>
+    </div>
+</div>
+        <div class="goals-section">
+    <h2 class="main-title">Goals</h2>
+    <div class="goals-grid">
+        <div class="goal-item">
+            <h3 class="goal-subtitle">MS Information Technology</h3>
+            <p>Further studies in Information Technology or Cybersecurity at a reputable university to deepen technical expertise.</p>
+        </div>
+
+        <div class="goal-item">
+            <h3 class="goal-subtitle">Successful Graduation</h3>
+            <p>Successfully complete all academic requirements and internships to graduate with a Bachelor of Science in Information Technology from Mapúa University.</p>
+        </div>
+
+       
+    </div>
+</div>
+</div>
+   <hr class="section-divider ending-line">
+   
+
+    <div class="info-pill-container" onclick="togglePill()">
+    <div class="info-pill">
+        <span id="infoIcon" class="info-circle">i</span>
+        
+        <div id="pillContent" class="pill-content closed">
+    Page updated Feb 15, 2026 
+    <span>|</span> 
+    <a href="https://workspace.google.com/products/sites/" class="pill-link" target="_blank">Google Sites</a> 
+    <span>|</span> 
+    <a href="#" class="pill-link" onclick="event.stopPropagation(); openReport(event)">Report abuse</a>
+</div>
+
+<div id="reportModal" class="modal-overlay" onclick="closeReport()">
+    <div class="report-container" onclick="event.stopPropagation()">
+        
+        <div id="selectionScreen">
+            <h3>What would you like to report?</h3>
+            <div class="report-item" onclick="showCategories('Entire Site')">
+                <span>Report the entire site</span>
+                <span class="chevron">›</span>
+            </div>
+            <div class="report-item" onclick="showCategories('Current Page')">
+                <span>Report this specific page</span>
+                <span class="chevron">›</span>
+            </div>
+        </div>
+
+        <div id="categoryScreen" style="display: none;">
+            <button class="back-btn" onclick="backToSelection()">← Back</button>
+            <h3 id="categoryTitle">Select a reason</h3>
+            
+            <div class="report-item" onclick="submitReport('Spam')"><span>Spam, malware, or phishing</span><span class="chevron">›</span></div>
+            <div class="report-item" onclick="submitReport('Sexually explicit')"><span>Sexually explicit</span><span class="chevron">›</span></div>
+            <div class="report-item" onclick="submitReport('Violent')"><span>Violent or dangerous</span><span class="chevron">›</span></div>
+            <div class="report-item" onclick="submitReport('Hate speech')"><span>Hate speech, harassment, or bullying</span><span class="chevron">›</span></div>
+            
+            <div class="report-item" onclick="showTextInput()">
+                <span>Something else</span>
+                <span class="chevron">›</span>
+            </div>
+        </div>
+
+        <div id="textInputScreen" style="display: none;">
+            <button class="back-btn" onclick="showCategories(reportScope)">← Back</button>
+            <h3>Tell us more</h3>
+            <textarea id="customReportText" placeholder="Please describe the issue..." rows="4" style="width: 100%; box-sizing: border-box; margin-bottom: 10px; padding: 8px;"></textarea>
+            <button class="submit-btn" onclick="submitCustomReport()">Submit Report</button>
+        </div>
+
+    </div>
+</div>
+
+    <script src="search.js"></script>
+    <script>
+     let reportScope = ""; // 'Entire Site' or 'Current Page'
+
+function openReport(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    resetModal();
+    document.getElementById('reportModal').style.display = 'flex';
+}
+
+function resetModal() {
+    document.getElementById('selectionScreen').style.display = 'block';
+    document.getElementById('categoryScreen').style.display = 'none';
+    document.getElementById('textInputScreen').style.display = 'none';
+    document.getElementById('customReportText').value = ""; // Clear the text box
+}
+
+function showCategories(scope) {
+    reportScope = scope;
+    document.getElementById('categoryTitle').innerText = "Report " + scope;
+    
+    document.getElementById('selectionScreen').style.display = 'none';
+    document.getElementById('textInputScreen').style.display = 'none';
+    document.getElementById('categoryScreen').style.display = 'block';
+}
+
+function showTextInput() {
+    document.getElementById('categoryScreen').style.display = 'none';
+    document.getElementById('textInputScreen').style.display = 'block';
+}
+
+function backToSelection() {
+    document.getElementById('selectionScreen').style.display = 'block';
+    document.getElementById('categoryScreen').style.display = 'none';
+}
+
+function submitReport(reason) {
+    alert("Thank you. Reported [" + reportScope + "] for: " + reason);
+    closeReport();
+}
+
+function submitCustomReport() {
+    const detail = document.getElementById('customReportText').value;
+    if (detail.trim() === "") {
+        alert("Please provide some details before submitting.");
+        return;
+    }
+    alert("Thank you. Custom report for [" + reportScope + "] received: " + detail);
+    closeReport();
+}
+
+function closeReport() {
+    document.getElementById('reportModal').style.display = 'none';
+}
+        function togglePill() {
+            const content = document.getElementById('pillContent');
+            const arrow = document.getElementById('pillArrow');
+            content.classList.toggle('closed');
+            arrow.innerHTML = content.classList.contains('closed') ? '▶' : '▼';
+        }
+    </script>
+</body>
+</html>
